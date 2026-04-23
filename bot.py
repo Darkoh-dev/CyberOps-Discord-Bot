@@ -5,6 +5,8 @@ import discord
 from discord.ext import commands
 from dotenv import load_dotenv
 
+from commands.threat_commands import setup_threat_commands
+
 
 SETTINGS_PATH = "config/settings.json"
 
@@ -33,9 +35,7 @@ async def on_ready():
     print(f"Using command prefix: {COMMAND_PREFIX}")
 
 
-@bot.command(name="ping")
-async def ping(ctx):
-    await ctx.send("CyberOps Bot is responding.")
 
+setup_threat_commands(bot)
 
 bot.run(TOKEN)
