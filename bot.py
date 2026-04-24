@@ -38,8 +38,21 @@ async def on_ready():
 
 
 
-setup_threat_commands(bot)
+setup_threat_commands(bot, settings)
 setup_log_commands(bot)
 setup_link_commands(bot)
+
+@bot.command(name="helpme")
+async def helpme(ctx):
+    await ctx.send(
+        "CyberOps Bot Commands:\n"
+        "!threats [category] [severity] - View threat items\n"
+        "!analyzelog <log text> - Analyze pasted log text\n"
+        "!inspectlink <url> - Inspect a link for basic red flags\n"
+        "Examples:\n"
+        "!threats cve critical\n"
+        "!analyzelog Failed password for invalid user admin\n"
+        "!inspectlink example.com/login"
+    )
 
 bot.run(TOKEN)

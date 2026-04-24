@@ -11,7 +11,7 @@ def load_threat_items():
     return data.get("threat_items", [])
 
 
-def get_threat_items(category=None, severity=None, limit=5):
+def get_threat_items(category=None, severity=None, limit=None):
     items = load_threat_items()
 
     if category:
@@ -26,4 +26,7 @@ def get_threat_items(category=None, severity=None, limit=5):
             if item.get("severity", "").lower() == severity.lower()
         ]
 
-    return items[:limit]
+    if limit is not None:
+        return items[:limit]
+
+    return items
