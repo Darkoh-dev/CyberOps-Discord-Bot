@@ -2,7 +2,7 @@ from urllib.parse import urlparse
 
 
 def normalize_url(url):
-    if not url.startwith(("http://", "https://")):
+    if not url.startswith(("http://", "https://")):
         return f"http://{url}"
     
     return url
