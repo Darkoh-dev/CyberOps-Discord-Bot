@@ -1,0 +1,28 @@
+{
+    "threat_items": [
+        {
+            "title": "Critical Remote Code Execution Vulnerability in Example VPN Appliance",
+            "category": "cve",
+            "severity": "critical",
+            "source": "Example Security Bulletin",
+            "summary": "A newly disclosed vulnerability could allow remote code execution on unpatched edge devices.",
+            "url": "https://example.com/cve-vpn-rce"
+        },
+        {
+            "title": "Healthcare Provider Reports Major Data Breach",
+            "category": "breach",
+            "severity": "high",
+            "source": "Example Breach Report",
+            "summary": "A healthcare organization disclosed unauthorized access affecting patient records.",
+            "url": "https://example.com/healthcare-breach"
+        },
+        {
+            "title": "New Phishing Campaign Targets Microsoft 365 Users",
+            "category": "news",
+            "severity": "medium",
+            "source": "Example Threat News",
+            "summary": "Researchers observed a phishing wave using fake login portals and urgent password reset lures.",
+            "url": "https://example.com/m365-phishing"
+        }
+    ]
+}
