@@ -1,0 +1,14 @@
+{
+    "command_prefix": "!",
+    "bot_name": "CyberOps Bot",
+    "enabled_modules": {
+        "threat_alerts": true,
+        "log_analysis": true,
+        "link_inspection": true
+    },
+    "limits": {
+        "max_threat_results": 5,
+        "max_log_lines": 50,
+        "max_log_chars": 4000
+    }
+}
