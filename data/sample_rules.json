@@ -1,0 +1,40 @@
+{
+    "rules": [
+        {
+            "name": "Repeated Failed Login",
+            "pattern": "failed password",
+            "description": "Repeated failed password attempts can indicate brute-force or credential guessing activity.",
+            "severity": "high"
+        },
+        {
+            "name": "Invalid User Attempt",
+            "pattern": "invalid user",
+            "description": "Attempts against invalid usernames can indicate account enumeration or opportunistic probing.",
+            "severity": "medium"
+        },
+        {
+            "name": "Access Denied Event",
+            "pattern": "access denied",
+            "description": "Access denied events may indicate unauthorized access attempts or misconfigured permissions.",
+            "severity": "medium"
+        },
+        {
+            "name": "Suspicious PowerShell Usage",
+            "pattern": "powershell",
+            "description": "PowerShell activity can be benign, but it is also commonly used in attacker tradecraft.",
+            "severity": "medium"
+        },
+        {
+            "name": "Encoded Command Detected",
+            "pattern": "encodedcommand",
+            "description": "Encoded commands are often used to hide command intent and should be reviewed carefully.",
+            "severity": "high"
+        },
+        {
+            "name": "Authentication Failure",
+            "pattern": "authentication failed",
+            "description": "Authentication failure patterns may indicate credential abuse or service misconfiguration.",
+            "severity": "medium"
+        }
+    ]
+}

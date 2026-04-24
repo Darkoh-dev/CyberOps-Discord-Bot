@@ -6,6 +6,7 @@ from discord.ext import commands
 from dotenv import load_dotenv
 
 from commands.threat_commands import setup_threat_commands
+from commands.log_commands import setup_log_commands
 
 
 SETTINGS_PATH = "config/settings.json"
@@ -37,5 +38,6 @@ async def on_ready():
 
 
 setup_threat_commands(bot)
+setup_log_commands(bot)
 
 bot.run(TOKEN)
