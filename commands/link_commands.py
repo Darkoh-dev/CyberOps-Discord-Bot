@@ -7,11 +7,11 @@ def setup_link_commands(bot):
         if not url:
             await ctx.send("Usage: !inspectlink <url>")
             return
-        
+
         result = inspect_url(url)
 
         lines = [
-            f"Link Inspection Results:",
+            "Link Inspection Results:",
             f"URL: {result['normalized_url']}",
             f"Host: {result['hostname'] or 'Unavailable'}"
         ]
@@ -21,13 +21,13 @@ def setup_link_commands(bot):
 
             for finding in result["findings"]:
                 lines.append(f"- {finding}")
-            else:
-                lines.append("Findings:")
-                lines.append("- No obvious formatting red flags were detected.")
+        else:
+            lines.append("Findings:")
+            lines.append("- No obvious formatting red flags were detected.")
 
-            lines.append("Caution Notes:")
+        lines.append("Caution Notes:")
 
-            for note in result["caution_notes"]:
-                lines.append(f"- {note}")
+        for note in result["caution_notes"]:
+            lines.append(f"- {note}")
 
-            await ctx.send("\n".join(lines))
+        await ctx.send("\n".join(lines))

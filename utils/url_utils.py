@@ -34,4 +34,4 @@ def is_ip_address_host(hostname):
         if not 0 <= int(part) <= 255:
             return False
         
-        return True
+    return True
