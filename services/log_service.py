@@ -28,4 +28,9 @@ def analyze_log_text(log_text):
                 }
             )
 
-    return findings
+    line_count = len([line for line in log_text.splitlines() if line.strip()])
+
+    return {
+        "findings": findings,
+        "line_count": line_count
+    }

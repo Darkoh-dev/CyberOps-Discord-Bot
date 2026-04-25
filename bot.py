@@ -39,7 +39,7 @@ async def on_ready():
 
 
 setup_threat_commands(bot, settings)
-setup_log_commands(bot)
+setup_log_commands(bot, settings)
 setup_link_commands(bot)
 
 @bot.command(name="helpme")

@@ -9,6 +9,7 @@
     "limits": {
         "max_threat_results": 5,
         "max_log_lines": 50,
-        "max_log_chars": 4000
+        "max_log_chars": 4000,
+        "max_log_attachment_bytes": 50000
     }
 }
